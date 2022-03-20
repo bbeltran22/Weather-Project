@@ -1,0 +1,52 @@
+body {
+  font-family: "Ubuntu Condensed", sans-serif;
+  padding-top: 10px;
+}
+
+h1,
+h3 {
+  font-weight: bolder;
+  color: #def0f7;
+}
+
+h5 {
+  color: #334a52;
+  word-spacing: 8px;
+}
+
+p {
+  color: #96afb8;
+}
+
+.search input[type="text"] {
+  width: 100px;
+  height: 25px;
+  font-size: 12px;
+  border-radius: 25px;
+  border-color: #334a52;
+}
+
+.search {
+  float: right;
+  margin: 7px;
+}
+
+.search button {
+  background-color: #96afb8;
+  color: #ffffff;
+  float: right;
+  padding: 5px 8px;
+  margin-right: 5px;
+  font-size: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.col-4 {
+  color: #96afb8;
+}
+
+.today {
+  color: #96afb8;
+}
