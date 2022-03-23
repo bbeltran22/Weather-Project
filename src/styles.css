@@ -43,11 +43,6 @@ p {
   cursor: pointer;
 }
 
-.weather-temperature img {
-  height: 10px;
-  width: 10px;
-}
-
 .col-4 {
   color: #96afb8;
 }
