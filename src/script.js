@@ -35,9 +35,9 @@ function showTemperature(response) {
   document.querySelector("#feels-like").innerHTML = Math.round(
     response.data.main.feels_like
   );
-  let iconMain = document.querySelector("#iconMain");
+  let iconElement = document.querySelector("#icon");
 
-  iconMain.setAttribute(
+  iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
