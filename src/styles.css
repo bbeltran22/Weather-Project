@@ -50,3 +50,12 @@ p {
 .today {
   color: #96afb8;
 }
+
+.temperature .active {
+  color: #96afb8;
+  cursor: default;
+}
+
+.temperature .active:hover {
+  text-decoration: none;
+}
