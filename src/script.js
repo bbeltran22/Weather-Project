@@ -37,6 +37,8 @@ function showTemperature(response) {
   );
   let iconElement = document.querySelector("#icon");
 
+  fahrenheitTemperature = response.data.main.temp;
+
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -58,8 +60,31 @@ function searchCity(event) {
 
   search(city);
 }
+
+function showCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
 let searchForm = document.querySelector("#search-form");
 
 searchForm.addEventListener("submit", searchCity);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click, showCelsiusTemperature");
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click, showFahrenheitTemperature");
+
+let fahrenheitTemperature = null;
 
 search("Salt Lake City");
