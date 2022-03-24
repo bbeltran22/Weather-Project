@@ -75,10 +75,6 @@ function showFahrenheitTemperature(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-let searchForm = document.querySelector("#search-form");
-
-searchForm.addEventListener("submit", searchCity);
-
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click, showCelsiusTemperature");
 
@@ -87,4 +83,6 @@ fahrenheitLink.addEventListener("click, showFahrenheitTemperature");
 
 let fahrenheitTemperature = null;
 
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", searchCity);
 search("Salt Lake City");
