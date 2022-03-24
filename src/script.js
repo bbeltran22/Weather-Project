@@ -21,24 +21,24 @@ let currentDate = document.querySelector("#currentDate");
 currentDate.innerHTML = `${day} ${hours}:${minutes}`;
 
 function showTemperature(response) {
-  document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#temp-max").innerHTML = Math.round(
-    response.data.main.temp_max
-  );
-  document.querySelector("#temp-min").innerHTML = Math.round(
-    response.data.main.temp_min
-  );
-  document.querySelector("#feels-like").innerHTML = Math.round(
-    response.data.main.feels_like
-  );
+  let temperatureElement = document.querySelector("#temperature");
+  let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let tempMaxElement = document.querySelector("#temp-max");
+  let tempMinElement = document.querySelector("#temp-min");
+  let feelsLikeElement = document.querySelector("#feels-like");
   let iconElement = document.querySelector("#icon");
 
   fahrenheitTemperature = response.data.main.temp;
 
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cityElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  tempMaxElement.innerHTML = Math.round(response.data.main.temp_max);
+  tempMinElement.innerHTML = Math.round(response.data.main.temp_min);
+  feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
