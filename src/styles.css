@@ -43,6 +43,11 @@ p {
   cursor: pointer;
 }
 
+.iconMain {
+  width: 80px;
+  height: 80px;
+}
+
 .col-4 {
   color: #96afb8;
 }
