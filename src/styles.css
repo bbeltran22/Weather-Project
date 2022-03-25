@@ -71,3 +71,7 @@ h3 .active:hover {
   font-size: 16px;
   top: -8px;
 }
+
+.source-code {
+  margin: auto;
+}
