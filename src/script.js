@@ -80,10 +80,10 @@ function showFahrenheitTemperature(event) {
 }
 
 let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click, showCelsiusTemperature");
+celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click, showFahrenheitTemperature");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 let fahrenheitTemperature = null;
 
