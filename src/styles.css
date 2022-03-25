@@ -43,6 +43,10 @@ p {
   cursor: pointer;
 }
 
+.description {
+  text-transform: capitalize;
+}
+
 .col-4 {
   color: #96afb8;
 }
