@@ -31,6 +31,7 @@ function showTemperature(response) {
   let iconElement = document.querySelector("#icon");
 
   fahrenheitTemperature = response.data.main.temp;
+  console.log(temperatureElement);
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
@@ -45,7 +46,6 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-
 function search(city) {
   let apiKey = "2fc2d2f29940c2aa3c6f40c54ba37b97";
   let units = "imperial";
