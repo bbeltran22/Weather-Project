@@ -34,7 +34,7 @@ function showTemperature(response) {
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
-  descriptionElement.innerHTML = response.data.weather[0].main;
+  descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   tempMaxElement.innerHTML = Math.round(response.data.main.temp_max);
   tempMinElement.innerHTML = Math.round(response.data.main.temp_min);
@@ -43,7 +43,7 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  iconElement.setAttribute("alt", response.data.weather[0].main);
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 function search(city) {
   let apiKey = "2fc2d2f29940c2aa3c6f40c54ba37b97";
