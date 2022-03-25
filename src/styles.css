@@ -21,6 +21,7 @@ p {
 h3 .active {
   color: #96afb8;
   cursor: default;
+  text-decoration: none;
 }
 
 h3 .active:hover {
