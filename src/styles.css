@@ -18,6 +18,15 @@ p {
   color: #96afb8;
 }
 
+h3 .active {
+  color: #96afb8;
+  cursor: default;
+}
+
+h3 .active:hover {
+  text-decoration: none;
+}
+
 .search input[type="text"] {
   width: 100px;
   height: 25px;
@@ -54,15 +63,6 @@ p {
 
 .today {
   color: #96afb8;
-}
-
-.temperature .active {
-  color: #96afb8;
-  cursor: default;
-}
-
-.temperature .active:hover {
-  text-decoration: none;
 }
 
 .units {
