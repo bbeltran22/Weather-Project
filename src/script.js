@@ -37,14 +37,15 @@ function displayTemperature(response) {
   document.querySelector("#feels-like").innerHTML = Math.round(
     response.data.main.feels_like
   );
-  document.querySelector("#icon").innerHTML = setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  document.querySelector("#icon").innerHTML = setAttribute(
-    "alt",
-    response.data.weather[0].description
-  );
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .querySelector("#icon")
+    .setAttribute("alt", response.data.weather[0].description);
   fahrenheitTemperature = response.data.main.temp;
 }
 
