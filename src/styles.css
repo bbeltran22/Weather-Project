@@ -53,6 +53,10 @@ h3 .active:hover {
   cursor: pointer;
 }
 
+.icon {
+  color: #96afb8;
+}
+
 .description {
   text-transform: capitalize;
   color: #96afb8;
