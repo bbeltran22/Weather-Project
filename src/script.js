@@ -22,6 +22,8 @@ currentDate.innerHTML = `${day} ${hours}:${minutes}`;
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  forecastElement.innerHTML = forecastHTML;
   forecastElement.innerHTML = `
   <div class="weather-forecast" id="forecast">
     <div class="row">
@@ -44,7 +46,8 @@ function displayForecast() {
         </div>
       </div>
     </div>
-  </div>`;
+  </div>
+  `;
 }
 
 function displayTemperature(response) {
