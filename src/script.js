@@ -20,6 +20,33 @@ if (minutes < 10) {
 let currentDate = document.querySelector("#currentDate");
 currentDate.innerHTML = `${day} ${hours}:${minutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = `
+  <div class="weather-forecast" id="forecast">
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 11rem">
+          <div class="card-body">
+            <h5 class="card-title">
+              Wednesday
+              <img
+                src="http://openweathermap.org/img/wn/50d@2x.png"
+                alt=""
+                width="42"
+              />
+            </h5>
+            <p class="card-text">
+              High:<span class="weather-forecast-max"> 61°</span>
+              Low:<span class="weather-forecast-min"> 36°</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
 function displayTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -92,3 +119,4 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
 search("Salt Lake City");
+displayForecast();
