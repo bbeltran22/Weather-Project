@@ -46,6 +46,7 @@ function displayForecast() {
           </div>
         </div>
       </div>
+      </div>
   `;
   });
 
