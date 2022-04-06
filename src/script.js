@@ -22,11 +22,111 @@ currentDate.innerHTML = `${day} ${hours}:${minutes}`;
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = "";
-  forecastElement.innerHTML = forecastHTML;
-  forecastElement.innerHTML = `
-  <div class="weather-forecast" id="forecast">
-    <div class="row">
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `
+    
+      <div class="col">
+        <div class="card" style="width: 11rem">
+          <div class="card-body">
+            <h5 class="card-title">
+              Wednesday
+              <img
+                src="http://openweathermap.org/img/wn/50d@2x.png"
+                alt=""
+                width="42"
+              />
+            </h5>
+            <p class="card-text">
+              High:<span class="weather-forecast-max"> 61°</span>
+              Low:<span class="weather-forecast-min"> 36°</span>
+            </p>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+  `;
+  forecastHTML =
+    forecastHTML +
+    `
+    
+      <div class="col">
+        <div class="card" style="width: 11rem">
+          <div class="card-body">
+            <h5 class="card-title">
+              Wednesday
+              <img
+                src="http://openweathermap.org/img/wn/50d@2x.png"
+                alt=""
+                width="42"
+              />
+            </h5>
+            <p class="card-text">
+              High:<span class="weather-forecast-max"> 61°</span>
+              Low:<span class="weather-forecast-min"> 36°</span>
+            </p>
+          </div>
+       
+      </div>
+    </div>
+  </div>
+  `;
+  forecastHTML =
+    forecastHTML +
+    `
+    
+      <div class="col">
+        <div class="card" style="width: 11rem">
+          <div class="card-body">
+            <h5 class="card-title">
+              Wednesday
+              <img
+                src="http://openweathermap.org/img/wn/50d@2x.png"
+                alt=""
+                width="42"
+              />
+            </h5>
+            <p class="card-text">
+              High:<span class="weather-forecast-max"> 61°</span>
+              Low:<span class="weather-forecast-min"> 36°</span>
+            </p>
+          </div>
+       
+      </div>
+    </div>
+  </div>
+  `;
+  forecastHTML =
+    forecastHTML +
+    `
+    
+      <div class="col">
+        <div class="card" style="width: 11rem">
+          <div class="card-body">
+            <h5 class="card-title">
+              Wednesday
+              <img
+                src="http://openweathermap.org/img/wn/50d@2x.png"
+                alt=""
+                width="42"
+              />
+            </h5>
+            <p class="card-text">
+              High:<span class="weather-forecast-max"> 61°</span>
+              Low:<span class="weather-forecast-min"> 36°</span>
+            </p>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+  `;
+  forecastHTML =
+    forecastHTML +
+    `
+    
       <div class="col">
         <div class="card" style="width: 11rem">
           <div class="card-body">
@@ -44,10 +144,12 @@ function displayForecast() {
             </p>
           </div>
         </div>
-      </div>
+     
     </div>
   </div>
   `;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function displayTemperature(response) {
