@@ -54,8 +54,15 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  let apiKey = "2fc2d2f29940c2aa3c6f40c54ba37b97";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.name;
+
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -81,6 +88,8 @@ function displayTemperature(response) {
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].description);
   fahrenheitTemperature = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
 
 function search(city) {
@@ -126,4 +135,3 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
 search("Salt Lake City");
-displayForecast();
