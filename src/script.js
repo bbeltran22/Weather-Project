@@ -133,31 +133,6 @@ function searchCity(event) {
   search(city);
 }
 
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-  let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  fahrenheitLink.classList.add("active");
-  celsiusLink.classList.remove("active");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-let fahrenheitTemperature = null;
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
 search("Salt Lake City");
